@@ -1,10 +1,9 @@
-var container = document.getElementById("participants");
-var participant = document.getElementsByClassName("participant");
-var carrier = document.getElementById("carrierInput");
+var container = document.getElementById("participants"),
+    participant = document.getElementsByClassName("participant"),
+    carrier = document.getElementById("carrierInput");
 
-var participantsParsed;
-
-var num;
+var participantsParsed,
+    num;
 
 
 function getParticipants() {
@@ -12,9 +11,7 @@ function getParticipants() {
   'use strict';
 
   var carrier_value = localStorage.getItem("carrierValue");
-
   participantsParsed = JSON.parse(carrier_value);
-
   console.log(participantsParsed);
 
 };
@@ -46,15 +43,10 @@ function showParticipants(){
   if(participantsParsed !== null){
 
     container.innerHTML = "";
-
     count = Object.keys(participantsParsed).length;
-
-    console.log("number of participants:", count);
-
+    // console.log("number of participants:", count);
     for (var i = 0; i < count; i++) {
-
       container.innerHTML += "" + parsedMarkup + "";
-
     }
 
     var nameInput = document.querySelectorAll(".input-name");
@@ -148,7 +140,4 @@ function storeParticipants() {
   location.reload();
 }
 //
-
-
-
 window.onload = showParticipants();
