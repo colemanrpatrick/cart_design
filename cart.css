@@ -1,0 +1,165 @@
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+*:not(.fa){
+  font-family:"Roboto Condensed",sans-serif;
+}
+a{
+	text-decoration: none !important;
+}
+body{
+  position: relative;
+	padding: 0;
+  margin: 0;
+}
+/*====================================*/
+.shopping-cart {
+  border: 5px solid green;
+  font-size: 18px;
+  display: inline-block;
+  width: 24em;
+  margin: 0.5em;
+}
+.package-row{
+  width: 100%;
+  text-align: center;
+}
+.package-row header{
+  width: 100%;
+  padding: 0.4em;
+  font-size: 1.25em;
+  text-transform: capitalize;
+  text-align: left;
+  background-color: #10aa10;
+  color: white;
+}
+.package {
+  display: inline-block;
+  width: 33.3%;
+  margin-left: -2px;
+  padding: 0.5em;
+  margin-right: -2px;
+}
+.package hr{
+  border: 0;
+}
+.package p {
+  font-size: 0.75em;
+  text-transform: capitalize;
+}
+.package span{
+  font-size: 1.25em;
+  line-height: 1.5em;
+  text-decoration: line-through;
+}
+.package b{
+  font-size: 1.2em;
+  color:#10aa10;
+  font-weight:normal;
+}
+.package br{
+  height: 0;
+}
+/*====================================*/
+.numberSpinner{
+  margin: 0.5em;
+}
+.numberSpinner section {
+  position: relative;
+  overflow: hidden;
+  width: 2.25em;
+  display: block;
+  vertical-align: middle;
+  border: 2px solid #10aa10;
+  margin: 0.25em auto;
+}
+.numberSpinner input[type="number"] {
+  font-size: 1em;
+  width: 3em;
+  padding: 0.25em;
+  border: 0;
+  color: darkblue;
+}
+.numberSpinner button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1em;
+  padding: 0.75em 0;
+  line-height: 0em;
+  text-align: center;
+  border: 0;
+  font-weight: bold;
+  background-color: #10aa10;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.numberSpinner button:hover{
+  opacity:0.7;
+}
+.numberSpinner button:active{
+  background-color: gold;
+}
+/*====================================*/
+.participants{
+	width: 100%;
+	padding: 0.5em;
+	font-size: 0.9em;
+}
+.participant{
+	border: 2px solid gainsboro;
+	padding: 0.5em;
+	text-align: right;
+}
+.participant label, .participant input {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: capitalize;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin: 0.5em;
+  text-align: left;
+}
+.input-age,
+.input-name{
+	padding: 0.25em;
+	font-size: 1em;
+}
+.participant .input-age,
+.participant label[for="age"]{
+	width: 20%;
+}
+.participant .input-name,
+.participant label[for="name"] {
+   width: 71.6%;
+}
+.total{
+	text-transform: capitalize;
+	padding: 1em;
+}
+.removeBtn {
+  font-size: 1em;
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 0.25em;
+  padding: 0.25em;
+  border: 2px solid;
+}
+#total {
+  font-size: 2em;
+  color: #10aa10;
+}
+#carrierInput {
+  border: 0;
+  height: 0;
+	width: 0;
+  overflow: hidden;
+}

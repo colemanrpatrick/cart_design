@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body onresize="console.log(window.innerWidth + 'px');">
+    <div class="shopping-cart">
+      <!-- ================ -->
+      <div class="package-row">
+        <header>package 2</header>
+        <div class="package">
+          <p>adult (21 yrs+)</p>
+          <p><span>$100.00</span></p>
+          <b class="price">$10.00</b>
+          <div class="numberSpinner">
+          <section><input id="input1" type="number" name="" value=""></section>
+          <button type="button" onclick="numIncrement('input1', false);recalcTotal();" class="numberMinus" name="button"> - </button>
+          <button type="button" onclick="numIncrement('input1', true);recalcTotal();" class="numberPlus" name="button"> + </button>
+           </div>
+        </div>
+        <div class="package">
+          <p>youth (13-20 yrs)</p>
+          <p><span>$100.00</span></p>
+          <b class="price">$65.50</b>
+          <div class="numberSpinner">
+          <section><input id="input2" type="number" name="" value=""></section>
+          <button type="button" class="numberMinus" onclick="numIncrement('input2',false);recalcTotal();"  name="button"> - </button>
+          <button type="button" class="numberPlus" onclick="numIncrement('input2',true);recalcTotal();" name="button"> + </button>
+          </div>
+        </div>
+        <div class="package">
+          <p>child (5-12 yrs+)</p>
+          <p><span>$100.00</span></p>
+          <b class="price">$80.00</b>
+          <div class="numberSpinner">
+            <section><input id="input3" type="number" name="" value=""></section>
+            <button type="button" onclick="numIncrement('input3', false);recalcTotal();" class="numberMinus" name="button"> - </button>
+            <button type="button" onclick="numIncrement('input3', true);recalcTotal();" class="numberPlus" name="button"> + </button>
+          </div>
+        </div>
+      </div>
+      <p class="total">your total: <span id="total"></span></p>
+      <label for="dateInput">choose a date</label>
+
+
+      <input type="text" name="dateInput" id="dateInput" value="">
+      <div id="datepicker">
+
+      <script type="text/javascript">
+      // $("#dateInput").attr('value',$(this).val());
+
+      $("#datepicker").datepicker();
+
+      $("#dateInput").change(function(){
+        $("#datepicker").datepicker('setDate',$(this).val());
+      });
+      $("#datepicker").change(function(){
+        $("#dateInput").attr('value',$(this).val());
+      });
+      </script>
+      <!-- ================ -->
+
+      <header>
+        participants names and ages
+      </header>
+      <div class="participants" id="participants">
+        <!-- <div class="participant" id="">
+          <label for="name">name</label>
+          <label for="age">age</label></br>
+          <input type="text" name="name" value="" namespace="name" class="name-input">
+          <input type="text" name="age" value="" namespace="age" class="age-input">
+          <button type="button" class="removeParticipant" onclick="removeParticipant()">remove participant</button>
+        </div> -->
+      </div>
+      <button type="button" name="button" onclick="addParticipant()">add participant</button>
+
+      <input type="text" name="carrierInput" id="carrierInput" value="" namespace="invisible input">
+      <button type="submit" onclick="storeParticipants()">submit</button>
+
+  </body>
+  <script src="participantHandler.js"></script>
+  <script type="text/javascript" src="numberinputScript.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>
